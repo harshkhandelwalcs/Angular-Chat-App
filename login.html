@@ -1,0 +1,64 @@
+<style>
+    .logincenter {
+        margin: auto;
+        margin-top: 15%;
+        border: 1px solid grey;
+        width: 350px;
+        height: 350px;
+    }
+</style>
+<div ng-controller="loginctrl" class="logincenter" ng-cloak="" >
+    <md-content class="md-whiteframe-z4">
+        <md-tabs md-dynamic-height="" md-border-bottom="">
+            <md-tab label="SIGNIN">
+                <md-content class="md-padding" >
+                    <form name="searchForm">
+                        <div layout-gt-sm="column">
+                            <md-input-container flex="">
+                                <label>UserName</label>
+                                <input type="text">
+                            </md-input-container>
+                        </div>
+                        <div layout-gt-sm="column">
+                            <md-autocomplete flex="" required="" md-input-name="autocompleteField" md-input-minlength="2" md-input-maxlength="18"  md-items="item in ctrl.querySearch(ctrl.searchText)" md-floating-label="password">
+                                <md-item-template>
+                                </md-item-template>
+                                <div ng-messages="searchForm.autocompleteField.$error" >
+                                    <div ng-message="minlength">Your entry is not long enough.</div>
+                                    <div ng-message="maxlength">Your entry is too long.</div>
+                                </div>
+                            </md-autocomplete>
+                        </div>
+                    </form>
+                </md-content>
+            </md-tab>
+            <md-tab label="SIGNUP">
+                <md-content class="md-padding">
+                    <div layout-gt-sm="column">
+                        <md-input-container flex="">
+                            <label>Name</label>
+                            <input type="text">
+                        </md-input-container>
+                    </div>
+                </md-content>
+            </md-tab>
+        </md-tabs>
+    </md-content>
+    <div style="border: 2px solid grey">
+        <md-button class="md-raised md-primary" >LOGIN </md-button>
+    </div>
+    <div  >
+        <input type="image" style="height:40px " src="download.png"  ng-click="glogin()" >
+        <input type="image" style="height:40px " src="Untitled.png"  ng-click="fblogin()" >
+    </div>
+
+    <!--<div ng-controller="fire">-->
+
+    <!--</div>-->
+</div>
+
+
+
+
+
+

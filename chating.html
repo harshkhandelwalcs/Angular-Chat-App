@@ -1,0 +1,90 @@
+<!--<div  ng-controller="chatingctrl" style="height: 1000px" layout="row">-->
+    <!--<div class="col-xs-3 " style="background-color: #9E9E9E;" flex="">-->
+
+        <!--{{uid}}<br>-->
+        <!--<img class="img-responsive img-circle" src="{{image}}"><br>-->
+        <!--{{name}}-->
+    <!--</div>-->
+    <!--<div class="col-xs-8 "style="background-color: black;color: #f6f6f6;"  >-->
+
+    <!--</div>-->
+<!--</div>-->
+<style>
+    .bg-color{
+background-color:white;
+}
+.bg-color1{
+        background-color:white;
+    /*color:white;*/
+    }
+    .pading{
+        padding:3%;
+    }
+    .chatarea{
+
+        height:550px;
+
+    }
+    .center{
+        text-align: center;
+    }
+    .message-input-area{
+        position:relative;
+        bottom: 0;
+        left:0;
+        width:75%;
+        margin-left:25%;
+        padding: 20px;
+
+
+    }
+
+
+
+
+</style>
+<div class="container" ng-controller="chatingctrl">
+    <div class="row">
+        <div class="col-xs-3 bg-color pading border center">
+            <img class="img-responsive img-circle " src="{{image}}">
+            <div>{{name}}</div>
+            <div class="btn btn-block btn-primary">Logout</div>
+        </div>
+
+
+        <div class="col-xs-9 bg-color1 chatarea embed-responsive pading">
+
+<div ng-repeat="c in chat" style="color: white;background-color:black;border:2px solid yellow ;padding: 10px;border-radius: 10px; margin-bottom: 5px" >
+    {{c}}
+</div>
+            <div ng-repeat="n in message " style="color: white;background-color:black;border:2px solid yellow ;padding: 10px;border-radius: 10px; margin-bottom: 5px"  >
+
+{{n}}
+
+            </div>
+
+
+
+        </div>
+
+
+
+
+
+
+        <div >
+            <!--<textarea id="myTextArea" ng-keypress="send1($event)" placeholder="enter the text...." class=" form-control message-input-area " ng-model="text">-->
+            <!--</textarea>-->
+             <textarea id="myTextArea" placeholder="enter the text...." class=" form-control message-input-area " ng-model="text">
+
+            </textarea>
+            <div class="message-input-area">
+                <button  ng-click="send()">send</button>
+            </div>
+
+
+        </div>
+
+
+</div>
+</div>

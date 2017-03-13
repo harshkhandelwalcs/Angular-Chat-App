@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="angular.js"></script>
+    <script src="firebasenew.js"></script>
+    <script>
+        // Initialize Firebase
+        var config = {
+            apiKey: "AIzaSyAIv4L0ITIhan0nIHxt8ScPO0goZNg4x4w",
+            authDomain: "test-2eb07.firebaseapp.com",
+            databaseURL: "https://test-2eb07.firebaseio.com",
+            storageBucket: "",
+        };
+        firebase.initializeApp(config);
+    </script>
+    <script scr="angularfire.min.js"></script>
+    <script src="firenew.js"></script>
+</head>
+<body ng-app="MyApp">
+<div ng-controller="firebaseCtrl">
+    <input type="text" ng-model="name.first">
+    {{name.first}}
+
+</div>
+</body>
+</html>
